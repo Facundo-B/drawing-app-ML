@@ -1,0 +1,17 @@
+body {
+    font-family: Arial;
+    background-color: khaki;
+    touch-action: none;
+    overscroll-behavior: none;
+}
+
+#main-container {
+    overscroll-behavior: none;
+    min-height: 100vh;
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
