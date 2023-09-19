@@ -12,14 +12,20 @@
     <div id="main-container">
         <div id="content">
             <h1>Data Creator</h1>
+            <div>
+                <input id="user" type="text" placeholder="Enter Name">
+                <span id="instructions"></span>
+                <button id="advanceBtn" onclick="start();">Start</button>
+            </div>
             <br>
-            <div id="sketchPadContainer"></div>
+            <div style="visibility: hidden;" id="sketchPadContainer"></div>
         </div>
     </div>
     <script src="js/sketchPad.js"></script>
     <script src="js/draw.js"></script>
-    <script>
-        const sketchPad = new SketchPad(sketchPadContainer)
-    </script>
+    <script defer src="js/start.js"></script>
+
+
 </body>
+
 </html>

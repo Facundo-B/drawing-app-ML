@@ -15,9 +15,8 @@ class SketchPad {
         container.appendChild(this.undoBtn)
 
         this.ctx = this.canvas.getContext("2d");
-        this.paths = []
-        this.isDrawing = false
-        this.#redraw();
+        
+        this.reset();
 
         this.#addEventListeners();
     }
@@ -59,10 +58,16 @@ class SketchPad {
     #redraw() {
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
         draw.paths(this.ctx, this.paths);
-        if(this.paths.length > 0){
+        if (this.paths.length > 0) {
             this.undoBtn.disabled = false;
         } else {
             this.undoBtn.disabled = true;
         }
+    }
+
+    reset() {
+        this.paths = []
+        this.isDrawing = false
+        this.#redraw();
     }
 }
