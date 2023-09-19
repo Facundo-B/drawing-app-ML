@@ -37,7 +37,7 @@ class SketchPad {
             }
         }
 
-        this.canvas.onpointerup = () => {
+        document.onpointerup = () => {
             this.isDrawing = false
         }
 
